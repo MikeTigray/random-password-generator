@@ -50,7 +50,6 @@ var specialCharacter = [
   ":",
 ];
 var number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let combined = [];
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate"); // variable that links button to functionality
@@ -70,6 +69,7 @@ generateBtn.addEventListener("click", writePassword);
 //-------Our main function--------
 
 function generatePassword() {
+  var combined = [];
   var passwordLength = prompt("How many characters do you want?");
   //---User is prompted to enter desired password length under below criteria
   if (passwordLength > 128) {
@@ -100,6 +100,8 @@ function generatePassword() {
     if (wantLower) {
       combined.push(...lowerCase);
     }
+
+    console.log(combined);
     //---- User must select at least one character type----
     if (
       wantLower === false &&
