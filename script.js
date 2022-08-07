@@ -60,7 +60,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = password || "Try again";
 }
 
 // Add event listener to generate button
@@ -101,7 +101,6 @@ function generatePassword() {
       combined.push(...lowerCase);
     }
 
-    console.log(combined);
     //---- User must select at least one character type----
     if (
       wantLower === false &&
